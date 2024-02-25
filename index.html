@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora nuestra tienda de música en línea para encontrar una amplia selección de instrumentos, accesorios y partituras. Descubre los últimos lanzamientos musicales en vinilo y CD, así como equipos de audio de alta calidad. ¡Encuentra todo lo que necesitas para tu pasión por la música en nuestra tienda en línea!">
+    <meta name="keywords" content="música, canciones, artistas, géneros, conciertos">
+    <title>MusicHouse</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./multimedia/img/pua-de-guitarra.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navegador">
+        <p class="logo">MUSICHOUSE</p>
+        <button id="mostrarCarrito" style="border: none; background: none; padding: 0; cursor: pointer;"><i class="fas fa-shopping-cart"></i></button>
+        <div id="carrito">
+            <h3>SHOPPING CART</h3>
+            <ul id="lista-productos" class="lista-productos">
+                
+            </ul>
+            
+            <a id="vaciar-carrito" class="boton vaciar-carrito" onclick="document.querySelector('#lista-productos').innerHTML = ''">Vaciar Carrito</a>
+            <button  class="boton" id="confirmarCompra">Confirmar</button>
+            
+        </div>
+        <img src="../multimedia/img/menu.png" alt="Menu Hamburguesa" class="menu">
+        <ul class="enlaces">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./pages/contactos.html">Contáctanos</a></li>
+            <li><a href="./pages/nosotros.html">Nosotros</a></li>
+            <li><a href="#finde_pagina">Datos</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="portada">
+            <h1 class="letras-centrales">Inicio</h1>
+            <h2 class="info">Jonny Greenwood:</h2>
+            <p class="info2">"Radiohead se podría reunir este año"</p>
+            <div class="articulo">
+                <a href="https://canchageneral.com/radiohead-se-reunira-este-ano-segun-jonny-greenwood/" target="blank"><button class="boton">Leer más</button></a>
+            </div>
+        </div>
+    </header>
+    <main class="mainindex">
+        <h3>DESCUBRE TU ESTILO</h3>
+        <section class="conjunto">
+            <div class="card">
+                <a href="./pages/strato.html"><img class="stratocaster" src="./multimedia/img/guitarras/tele-1-front.png" alt="Guitarra Stratocaster"></a>
+                <h4>FENDER STRATOCASTER</h4>
+                <p>$1699</p>
+                <button class="boton btnComprar" onclick="agregarProductoAlCarrito(this)">Comprar</button>
+            </div>
+            <div  class="card">
+              <a href="./pages/telecaster.html"><img class="telecaster" src="./multimedia/img/guitarras/telecaster.jpg" alt="Guitarra telecaster"></a>
+              <h4>FENDER TELECASTER</h4>
+              <P>$1699</P>
+              <button class="boton btnComprar" onclick="agregarProductoAlCarrito(this)">Comprar</button>
+            </div>
+  
+            <div  class="card">
+              <a href="./pages/lespaul.html"><img class="lespaul" src="./multimedia/img/guitarras/gibsonlespaul.jpg" alt="Guitarra Les Paul"></a>
+              <h4>GIBSON LESPAUL</h4>
+              <P>$2150</P>
+              <button class="boton btnComprar" onclick="agregarProductoAlCarrito(this)">Comprar</button>
+            </div>
+  
+            <div  class="card">
+              <a href="./pages/casino.html"><img class="casino" src="./multimedia/img/guitarras/casino.jpg" alt="Guitarra Casino"></a>
+              <h4>EPIPHONE CASINO</h4>
+              <P>$700</P>
+              <button class="boton btnComprar" onclick="agregarProductoAlCarrito(this)">Comprar</button>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="pie">
+        <div id="finde_pagina"></div>
+        <div class="datos">
+            <h5 class="contacto">CONTACTO</h5>
+            <p>DIRECCIÓN:<span>Rumichaca 822 y 9 de Octubre</span></p>
+            <p>EMAIL:<span> hugoanto70@gmail.com</span></p>
+            <p>TELEFONO: <span>+593 6790 4535</span></p>
+        </div>
+        <section class="redes_sociales">
+            <h5 class="contacto">REDES</h5>
+            <div class="redes">
+                <img class="twitter" src="../multimedia/img/gorjeo.png" alt="twitter">
+                <p>@musichouse</p>
+            </div>
+            <div class="redes">
+                <img class="instagram" src="../multimedia/img/instagram.png" alt="instagram">
+                <p>@musichouse_ec</p>
+            </div>
+            <div class="redes">
+                <img class="facebook" src="../multimedia/img/facebook.png" alt="facebook">
+                <p>musichouse_ec</p>
+            </div>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd

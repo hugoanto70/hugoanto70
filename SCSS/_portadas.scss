@@ -1,0 +1,116 @@
+/*heater index portada*/
+
+.portada{
+    background-image: url(../multimedia/img/johnnyportada.png);
+    width: 100%;
+    height:450px;
+    background-size: cover;
+    text-align:center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    .letras-centrales{
+        text-align: center;
+        color: #bebcbc;
+        text-shadow: 5px 5px 20px rgba(0,0,0,5);
+        font-size: 60px; 
+        margin-top:40px;
+        cursor: pointer;
+     }
+     .info{
+        color: #f3f3f0;
+        text-align:center;
+        text-decoration: solid;
+        font-size: 70px;
+        text-shadow: 5px 5px 20px rgba(0,0,0,20);
+     }
+     .info2{
+        color: #f3f0f0;
+        text-align:center;
+        text-decoration: solid;
+        font-size: 35px;
+        text-shadow: 5px 5px 20px rgba(0,0,0,20);
+    
+     }
+     .articulo{
+        text-align: center;
+        padding: 30px;
+        color:#1c1b1b;
+        .boton{
+            background-color: rgb(251, 224, 25);
+            font-size: 20px;
+            text-decoration: none;
+            padding: 20px;
+            flex-direction: column;
+            border-radius:8px;
+            border:0;
+            cursor: pointer;
+            color:#1c1b1b;
+         }
+     }
+     @media(max-width:768px){
+        .letras-centrales{
+          font-size: 50px; 
+       }
+       .info{
+          font-size: 60px;
+       }
+       .info2{
+          font-size: 35px;
+       }
+     }
+     @media(max-width:576px){
+      .letras-centrales{
+        font-size: 35px; 
+     }
+     .info{
+        font-size: 45px;
+     }
+     .info2{
+        font-size: 30px;
+     }
+   }
+ }
+
+
+
+ /*heater contactos portada*/
+ .portada2{
+    background-image: url(../multimedia/img/Musicos/smiths.jpg);
+    width: 100%;
+    height:300px;
+    background-size: cover;
+    text-align:center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  .letras-centrales{
+      text-align: center;
+      color: #fbf6f6;
+      font-size: 60px; 
+      margin:20px;
+      text-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+      @media(max-width:576px){
+        font-size: 40px; 
+      }
+   }
+  }
+  
+ /*heater nosotros portada*/
+ .portada3{
+    background-image: url(../multimedia/img/Musicos/thebeatles.jpg);
+    width: 100%;
+    height:300px;
+    background-size: cover;
+    text-align:center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  .letras-centrales{
+      text-align: center;
+      color: #fbf6f6;
+      text-shadow: 5px 5px 20px rgba(0,0,0,1);
+      font-size: 60px; 
+      margin:20px;
+    }
+  }

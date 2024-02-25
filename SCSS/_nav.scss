@@ -1,0 +1,80 @@
+.navegador{
+    background-color: #1E1F26;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+   
+    .logo{
+        font-family: 'Chakra Petch', 'Barlow Condensed';
+        font-size: 45px;
+        color: #ffff;
+        padding:50px ;
+        
+    }
+ 
+    .enlaces{
+      font-size: 30px;
+      list-style: none;
+      display: flex;
+     
+      li a{
+        color:#bebcbc;
+        font-size: 30px;
+        text-decoration: none; 
+        display:block;
+        padding:10px 15px;
+      }
+    }
+    .menu{
+      display:none;
+    }
+
+    @media(max-width:998px){
+      .logo{
+        font-size:35px;
+      }
+  
+      .menu{
+      display:block;
+      margin:40px;
+      width: 35px;
+      order:-1;
+     }
+     .menu:hover + ul {
+      left: 0;
+     }
+      .enlaces{
+      z-index: 9999;
+      box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+      left: -500px;
+      position:fixed;
+      top:0;
+      width:250px;
+      height:100vh;
+      background-color: #e3e3e3;
+      flex-direction:column;
+      align-items: center;
+      padding-top:50px;
+      transition: 0.5s;
+      
+      li a{
+        color:#1c1b1b;
+        margin-right:15px;
+        cursor: pointer;
+        font-size: 25px;
+        font-family: 'Chakra Petch', 'Barlow Condensed';
+
+      }
+     }
+     .enlaces:hover{
+      left:0;
+     }
+    
+   }
+   @media(max-width:576px){
+    .logo{
+      font-size:25px;
+    }
+  }
+ }
+

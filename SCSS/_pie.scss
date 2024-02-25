@@ -1,0 +1,134 @@
+.pie{
+    background-color: #1c1b1b;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    font-size: 18px;
+    .datos{
+        color: #ffffff;;
+        font-size: 15px;
+        margin: 40px;
+        grid-column-start: 1; 
+        grid-column-end: 2; 
+        span{
+            display: block;
+            color: #b1afaf;;
+            font-size: 15px;
+            
+           }
+       }
+       .redes_sociales{
+        color:white;
+        .redes{
+          display: flex;
+          .twitter{
+         
+            width: 35px;
+            height: 35px;
+            background-size: fill;
+            margin-right: 20px;
+          }
+          .instagram{
+         
+            width: 35px;
+            height: 35px;
+            background-size: fill;
+            margin-right: 20px;
+          }
+          .facebook{
+         
+            width: 35px;
+            height: 35px;
+            background-size: fill;
+            margin-right: 20px;
+          }
+        }
+
+        
+      }
+       @media(max-width:768px){
+        .datos{
+          font-size: 13px;
+          margin: 40px; 
+          span{
+              color: #b1afaf;;
+              font-size: 13px;
+             }
+         }
+         .redes_sociales{
+          .redes{
+            font-size:13px;
+
+            .twitter{
+           
+              width: 30px;
+              height: 30px;
+              margin-right: 10px;
+            }
+            .instagram{
+           
+              width: 30px;
+              height: 30px;
+              margin-right: 10px;
+            }
+            .facebook{
+           
+              width: 30px;
+              height: 30px;
+              background-size: fill;
+              margin-right: 10px;
+            }
+          }
+  
+          
+        }
+         
+     
+      }
+      @media(max-width:576px){
+        .datos{
+          font-size: 16px;
+          margin: 40px; 
+          span{
+              color: #b1afaf;;
+              font-size: 10px;
+             }
+         }
+         .redes_sociales{
+          .redes{
+            font-size:13px;
+            margin-top: 5px;
+
+            .twitter{
+           
+              width: 25px;
+              height: 25px;
+              background-size: fill;
+              margin-right: 10px;
+              margin-bottom:10px;
+              
+            }
+            .instagram{
+           
+              width: 25px;
+              height: 25px;
+              background-size: fill;
+              margin-right: 10px;
+              margin-bottom:10px;
+            }
+            .facebook{
+           
+              width: 25px;
+              height: 25px;
+              background-size: fill;
+              margin-right: 10px;
+              margin-bottom:10px;
+            }
+          }
+  
+          
+        }
+     
+      }
+  }

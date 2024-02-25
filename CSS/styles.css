@@ -1,0 +1,638 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,500&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navegador {
+  background-color: #1E1F26;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navegador .logo {
+  font-family: "Chakra Petch", "Barlow Condensed";
+  font-size: 45px;
+  color: white;
+  padding: 50px;
+}
+.navegador .enlaces {
+  font-size: 30px;
+  list-style: none;
+  display: flex;
+}
+.navegador .enlaces li a {
+  color: #bebcbc;
+  font-size: 30px;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+.navegador .menu {
+  display: none;
+}
+@media (max-width: 998px) {
+  .navegador .logo {
+    font-size: 35px;
+  }
+  .navegador .menu {
+    display: block;
+    margin: 40px;
+    width: 35px;
+    order: -1;
+  }
+  .navegador .menu:hover + ul {
+    left: 0;
+  }
+  .navegador .enlaces {
+    z-index: 9999;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    left: -500px;
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #e3e3e3;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    transition: 0.5s;
+  }
+  .navegador .enlaces li a {
+    color: #1c1b1b;
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: "Chakra Petch", "Barlow Condensed";
+  }
+  .navegador .enlaces:hover {
+    left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .navegador .logo {
+    font-size: 25px;
+  }
+}
+
+/*heater index portada*/
+.portada {
+  background-image: url(../multimedia/img/johnnyportada.png);
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.portada .letras-centrales {
+  text-align: center;
+  color: #bebcbc;
+  text-shadow: 5px 5px 20px rgb(0, 0, 0);
+  font-size: 60px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.portada .info {
+  color: #f3f3f0;
+  text-align: center;
+  text-decoration: solid;
+  font-size: 70px;
+  text-shadow: 5px 5px 20px rgb(0, 0, 0);
+}
+.portada .info2 {
+  color: #f3f0f0;
+  text-align: center;
+  text-decoration: solid;
+  font-size: 35px;
+  text-shadow: 5px 5px 20px rgb(0, 0, 0);
+}
+.portada .articulo {
+  text-align: center;
+  padding: 30px;
+  color: #1c1b1b;
+}
+.portada .articulo .boton {
+  background-color: rgb(251, 224, 25);
+  font-size: 20px;
+  text-decoration: none;
+  padding: 20px;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  color: #1c1b1b;
+}
+@media (max-width: 768px) {
+  .portada .letras-centrales {
+    font-size: 50px;
+  }
+  .portada .info {
+    font-size: 60px;
+  }
+  .portada .info2 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 576px) {
+  .portada .letras-centrales {
+    font-size: 35px;
+  }
+  .portada .info {
+    font-size: 45px;
+  }
+  .portada .info2 {
+    font-size: 30px;
+  }
+}
+
+/*heater contactos portada*/
+.portada2 {
+  background-image: url(../multimedia/img/Musicos/smiths.jpg);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.portada2 .letras-centrales {
+  text-align: center;
+  color: #fbf6f6;
+  font-size: 60px;
+  margin: 20px;
+  text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 576px) {
+  .portada2 .letras-centrales {
+    font-size: 40px;
+  }
+}
+
+/*heater nosotros portada*/
+.portada3 {
+  background-image: url(../multimedia/img/Musicos/thebeatles.jpg);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.portada3 .letras-centrales {
+  text-align: center;
+  color: #fbf6f6;
+  text-shadow: 5px 5px 20px rgb(0, 0, 0);
+  font-size: 60px;
+  margin: 20px;
+}
+
+.mainindex {
+  text-align: center;
+  margin: 35px;
+  font-size: 25px;
+  color: #3b3b3b;
+}
+.mainindex .conjunto {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  overflow: hidden;
+  background: #fff;
+  transition: all 400ms ease;
+}
+.mainindex .conjunto .card:hover {
+  transform: translateY(-5%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+.mainindex .conjunto .card {
+  cursor: pointer;
+  width: 85px;
+  height: 85%;
+  border: solid #3b3b3b;
+  width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 400ms ease;
+  margin: 30px;
+}
+.mainindex .conjunto .card .stratocaster {
+  width: 178px;
+  margin: 31px;
+}
+.mainindex .conjunto .card .telecaster {
+  width: 150px;
+  margin: 40px;
+}
+.mainindex .conjunto .card .lespaul {
+  width: 150px;
+  margin: 40px;
+}
+.mainindex .conjunto .card .casino {
+  width: 160px;
+  margin: 35px;
+}
+.mainindex .conjunto .card P {
+  font-size: 20px;
+  color: #b80c0c;
+}
+@media (max-width: 998px) {
+  .mainindex .conjunto {
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .mainindex .conjunto {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media (max-width: 576px) {
+  .mainindex .conjunto {
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
+}
+
+/*main contactanos*/
+.maincontactos {
+  text-align: center;
+  margin: 35px;
+  font-size: 25px;
+  color: #fffcfc;
+}
+.maincontactos .palabra {
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  color: #060606;
+}
+.maincontactos form {
+  background-color: rgb(197, 197, 197);
+  border-radius: 10px;
+  color: #060606;
+  font-size: 15px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 550px;
+}
+.maincontactos form input {
+  border: 0;
+  outline: none;
+  width: 450px;
+  padding: 10px;
+}
+.maincontactos form input .field {
+  border: solid 1px #ccc;
+}
+.maincontactos form .seleccion {
+  margin: 20px;
+}
+.maincontactos form .seleccion label {
+  padding: 10px;
+}
+.maincontactos form .seleccion input {
+  margin: 0px;
+}
+.maincontactos .center-content {
+  text-align: center;
+}
+.maincontactos .center-content .boton {
+  border-radius: 3px;
+  display: inline-block;
+  padding: 15px 10px;
+  margin-top: 15px;
+  color: black;
+  cursor: pointer;
+}
+.maincontactos .center-content .boton:hover {
+  background-color: yellow;
+}
+@media (max-width: 576px) {
+  .maincontactos form {
+    width: 300px;
+  }
+  .maincontactos form input {
+    border: 0;
+    outline: none;
+    width: 150px;
+    padding: 10px;
+  }
+  .maincontactos form input .field {
+    border: solid 1px #ccc;
+  }
+}
+
+/*main nosotros*/
+.mainnosotros {
+  margin: 30px;
+}
+.mainnosotros .valores {
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.mainnosotros .valores div {
+  border: solid #3b3b3b;
+  width: 400px;
+  height: 95%;
+  padding: 40px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.mainnosotros .valores div img {
+  margin: 10px;
+  width: 65px;
+}
+.mainnosotros .valores div h4 {
+  font-size: 25px;
+}
+.mainnosotros .valores div p {
+  text-align: justify;
+}
+.mainnosotros .valores div:hover {
+  background-color: yellow;
+  transition: 0.5s;
+}
+@media (max-width: 992px) {
+  .mainnosotros .valores {
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .mainnosotros .valores {
+    grid-template-columns: 100%;
+  }
+}
+
+.pie {
+  background-color: #1c1b1b;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  font-size: 18px;
+}
+.pie .datos {
+  color: #ffffff;
+  font-size: 15px;
+  margin: 40px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.pie .datos span {
+  display: block;
+  color: #b1afaf;
+  font-size: 15px;
+}
+.pie .redes_sociales {
+  color: white;
+}
+.pie .redes_sociales .redes {
+  display: flex;
+}
+.pie .redes_sociales .redes .twitter {
+  width: 35px;
+  height: 35px;
+  background-size: fill;
+  margin-right: 20px;
+}
+.pie .redes_sociales .redes .instagram {
+  width: 35px;
+  height: 35px;
+  background-size: fill;
+  margin-right: 20px;
+}
+.pie .redes_sociales .redes .facebook {
+  width: 35px;
+  height: 35px;
+  background-size: fill;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .pie .datos {
+    font-size: 13px;
+    margin: 40px;
+  }
+  .pie .datos span {
+    color: #b1afaf;
+    font-size: 13px;
+  }
+  .pie .redes_sociales .redes {
+    font-size: 13px;
+  }
+  .pie .redes_sociales .redes .twitter {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .pie .redes_sociales .redes .instagram {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .pie .redes_sociales .redes .facebook {
+    width: 30px;
+    height: 30px;
+    background-size: fill;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .pie .datos {
+    font-size: 16px;
+    margin: 40px;
+  }
+  .pie .datos span {
+    color: #b1afaf;
+    font-size: 10px;
+  }
+  .pie .redes_sociales .redes {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .pie .redes_sociales .redes .twitter {
+    width: 25px;
+    height: 25px;
+    background-size: fill;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .pie .redes_sociales .redes .instagram {
+    width: 25px;
+    height: 25px;
+    background-size: fill;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .pie .redes_sociales .redes .facebook {
+    width: 25px;
+    height: 25px;
+    background-size: fill;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+}
+.galeria h6 {
+  font-size: 25px;
+  margin: 20px;
+}
+.galeria #carouselExample {
+  width: 40%;
+}
+.galeria .carousel-item img {
+  object-fit: cover;
+  height: 400px;
+}
+@media (max-width: 768px) {
+  .galeria #carouselExample {
+    height: 450px;
+    width: 100%;
+  }
+}
+@media (max-width: 568px) {
+  .galeria #carouselExample {
+    height: 450px;
+    width: 100%;
+    padding-right: 5px;
+  }
+}
+@media (max-width: 428px) {
+  .galeria #carouselExample {
+    height: 450px;
+    width: 100%;
+    padding-right: 10px;
+  }
+}
+
+.compra_guitarra {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 50px;
+  justify-items: center;
+}
+.compra_guitarra p {
+  text-align: justify;
+}
+.compra_guitarra img {
+  width: 450px;
+}
+.compra_guitarra h6 {
+  font-family: "Chakra Petch", "Barlow Condensed";
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+.compra_guitarra .precio {
+  color: #b80c0c;
+  font-size: 25px;
+  font-weight: bold;
+}
+.compra_guitarra ul {
+  padding-top: 15px;
+  list-style: none;
+}
+.compra_guitarra ul li {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.compra_guitarra .boton_compra {
+  background-color: rgb(251, 224, 25);
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+}
+@media (max-width: 728px) {
+  .compra_guitarra {
+    grid-template-columns: 100%;
+  }
+  .compra_guitarra img {
+    width: 450px;
+  }
+  .compra_guitarra h6 {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 568px) {
+  .compra_guitarra img {
+    width: 300px;
+  }
+  .compra_guitarra h6 {
+    font-size: 20px;
+  }
+  .compra_guitarra .precio {
+    font-size: 15px;
+  }
+}
+
+#carrito {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 350px; /* Ancho inicial del carrito */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; 
+  display: none; 
+  
+}
+
+#mostrarCarrito{
+  background: none;
+}
+.fa-shopping-cart{
+  color: white;
+}
+#vaciar-carrito{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  
+}
+
+.boton:hover {
+  background-color: #45a049;
+}
+
+#vaciar-carrito, #confirmarCompra {
+  background-color: #45a049; /* Cambia el color de fondo del botón */
+  transition: all 0.3s;
+}
+
+#vaciar-carrito:hover, #confirmarCompra:hover {
+  background-color: #28ff33; /* Cambia el color de fondo del botón al pasar el mouse sobre él */
+}
